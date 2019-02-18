@@ -24,6 +24,7 @@ io.on('connection', function(socket){ //3
   });
 });
 
-http.listen(3000, function(){ //4
+var PORT = process.env.PORT || 3000;
+http.listen(PORT, function(){ //4
   console.log('server on!');
 });
