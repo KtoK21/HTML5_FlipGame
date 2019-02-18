@@ -2,6 +2,6 @@ const express = require("express");
 const PORT = process.env.PORT;
 const app = express();
 app.get("/", (req, res) => {
-res.send({test);
+res.send("test");
 });
-app.listen(PORT);
+app.listen(PORT || 6321);
