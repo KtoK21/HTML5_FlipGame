@@ -1,5 +1,5 @@
 {
-  "name": "server.js",
+  "name": "HTML5_FlipGame",
   "version": "1.0.0",
   "description": "testRemote commit test",
   "main": "server.js",
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/KtoK21/HTML5_FlipGame#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
   },
-  "engines":{
+  "engines": {
     "node": "v11.10.0",
     "npm": "6.8.0"
   }
