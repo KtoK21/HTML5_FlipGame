@@ -1,0 +1,27 @@
+{
+  "name": "index.js",
+  "version": "1.0.0",
+  "description": "testRemote commit test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KtoK21/HTML5_FlipGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KtoK21/HTML5_FlipGame/issues"
+  },
+  "homepage": "https://github.com/KtoK21/HTML5_FlipGame#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "engines":{
+    "node": "v4.2.6",
+    "npm": "3.5.2"
+  }
+}
