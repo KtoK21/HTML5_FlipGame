@@ -1,0 +1,31 @@
+<!-- client.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lobby</title>
+    <style>
+      .Lobby{ width: 95%; height: 200px; }
+      .name{ width: 10%; }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <textarea id="Lobby" class="Lobby" readonly></textarea>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      socket.on('update list', function(objects){
+        //$('#Lobby').val('');
+        objects.forEach(element => {
+           $('#Lobby').append(element['name']+'\n'); 
+           $('#Lobby').scrollTop($('#Lobby')[0].scrollHeight);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<!-- client.html -->
+﻿<!-- client.html -->
 
 <!DOCTYPE html>
 <html>
@@ -8,8 +8,7 @@
     <style>
       .chat_log{ width: 95%; height: 200px; }
       .name{ width: 10%; }
-      .message{ width: 70%; }
-      .chat{ width: 10%; }
+
     </style>
   </head>
   <body>
@@ -24,7 +23,7 @@
     <div id="box" class="box">
     <script src="/socket.io/socket.io.js"></script> <!-- 1 -->
     <script src="//code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
+    <script></script>
       var socket = io(); //1
       $('#chat').on('submit', function(e){ //2
         socket.emit('send message', $('#name').val(), $('#message').val());

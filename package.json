@@ -1,11 +1,11 @@
 {
   "name": "HTML5_FlipGame",
   "version": "1.0.0",
-  "description": "testRemote commit test",
-  "main": "server.js",
+  "description": "Game making",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
