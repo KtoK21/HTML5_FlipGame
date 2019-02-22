@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:700');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#24272e;
+}
+
+header{
+    background:white;
+}
+
+header > h1{
+    color: #24272e;
+    text-align:center;
+    font-family:'Asap', sans-serif;
+}
+
+.User{
+    margin:10px auto;
+    background-color:white;
+    border:none;
+    color: #2e2424;
+    text-align:center;
+    font-size:24px;
+}
+
+.Input{
+    font:sans-serif;
+    width:150px;
+    height:30px;
+}
+
+.Label{
+    font-size:large;
+    font:sans-serif;
+}
+
+.Submit{
+    margin:0 auto 38px;
+    position:relative;
+    background:#148544;
+    font-size:1.2em;
+}
+
+button{
+    cursor:pointer;
+}
+
+.hidden {
+    display: none
+  }
+
+.pure-button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .5em 1em;
+    color: #444;
+    color: rgba(0, 0, 0, .8);
+    border: 1px solid #999;
+    border: 0 transparent;
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px
+  }
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected,
+button.pure-button-primary,
+button.pure-button-selected {
+    background-color: #0078e7;
+    color: #fff
+  }

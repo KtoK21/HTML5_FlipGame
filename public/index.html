@@ -1,31 +1,49 @@
-<!-- client.html -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Lobby</title>
-    <style>
-      .Lobby{ width: 95%; height: 200px; }
-      .name{ width: 10%; }
 
-    </style>
-  </head>
-  <body>
-    <div>
-      <textarea id="Lobby" class="Lobby" readonly></textarea>
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      var socket = io();
-      socket.on('update list', function(objects){
-        //$('#Lobby').val('');
-        objects.forEach(element => {
-           $('#Lobby').append(element['name']+'\n'); 
-           $('#Lobby').scrollTop($('#Lobby')[0].scrollHeight);
-        });
+<head>
+  <meta charset="utf-8">
+  <title>Flip Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Flip Game</h1>
+  </header>
+
+  <div>
+
+    <!--<button class="User">Gren</button>-->
+
+    <!-- <textarea id="Lobby" class="Lobby" readonly></textarea>-->
+  </div>
+
+  <form id="Login">
+    <label class="Label" for="name">Name : </label>
+    <input id="Name" class="Input" type="text" id="name" />
+    <button id=start class="progress-button pure-button pure-button-primary" type="submit"><span class=content>Log
+        in</span><span class=progress><span id=progress-inner></span></span></button>
+  </form>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    var socket = io();
+
+    $('#Login').on('submit', function (e) {
+      socket.emit('login', $('#Name').val());
+      $('#Login').
       });
-    </script>
-  </body>
+
+    socket.on('update list', function (objects, object) {
+      objects.forEach(element => {
+        $('#Lobby').append(element['name'] + '\n');
+        $('#Lobby').scrollTop($('#Lobby')[0].scrollHeight);
+      });
+    });
+  </script>
+
+</body>
+
 </html>

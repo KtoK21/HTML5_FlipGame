@@ -10,13 +10,16 @@ var port = process.env.PORT || 3000;
 http.listen(port, function(){
     console.log("server on!");
 });
-
+//document.body.appendChild()
 var objects = new Array();
 io.on('connection', function(socket){
     console.log('user connected : ', socket.id);
-    var object = {'id' : socket.id, 'name' : objects.length};
-    objects.push(object);
-    io.emit('update list', objects);
+
+    socket.on('login', function(name){
+        var object = {'id' : socket.id, 'name' : name};
+        objects.push(object);
+        io.emit('update list', objects, object);
+    });
 
     socket.on('disconnect', function(){
         objects.splice(objects.findIndex(function(element){
@@ -24,5 +27,6 @@ io.on('connection', function(socket){
         }),1);
         io.emit('update list', objects);
         console.log('user disconnected : ', socket.id);
+
     });
 });
